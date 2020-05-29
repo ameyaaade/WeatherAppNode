@@ -11,7 +11,9 @@ weatherForm.addEventListener("submit", (e) => {
     messageOne.textContent = '';
 // fetch api works in client side not provided by node but support by browser
 
-    const url = `http://localhost:8080/weather?address=${location}`;
+    // const url = `http://localhost:8080/weather?address=${location}`;
+    const url = `/weather?address=${location}`; //deploy
+
     fetch(url).then((res) => {
       res.json().then((data) => {
         if (data.error) {
