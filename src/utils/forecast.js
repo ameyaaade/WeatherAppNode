@@ -12,8 +12,7 @@ const url = `http://api.weatherstack.com/current?access_key=52e2a7e76b9f63f4ceea
         }
         else{
             const {weather_descriptions,temperature,feelslike}=body.current
-            // callback(b)
-        callback(undefined,`${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out `)
+        callback(undefined,`${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out. The humidity is ${body.current.humidity} % `)
         }
     })
 }
